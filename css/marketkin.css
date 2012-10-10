@@ -1,0 +1,63 @@
+body {
+	padding: 10px;
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0 auto;
+	color: #333;
+}
+h1 {
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: center;
+
+}
+textarea {
+	width: 500px;
+	height: 400px;
+	font-size: 17px;
+}
+label {
+	display: block;
+	font-size: 20px;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+div a{
+	text-decoration: none;
+	color:blue;
+}
+.wiki-content {
+	margin-top: 5px;
+}
+.error{
+	color: red;
+}
+.footer{
+	color: gray;
+	text-align: right;
+}
+.header{
+	color: gray;
+	text-align: right;
+	margin-left: 15px;
+}
+.header a{
+	text-decoration: none;
+	color: gray;
+}
+.header a:hover{
+	color: silver;
+}
+.history table{
+	width: 1000px;
+	border-collapse: collapse;
+}
+.history th{
+	padding: 0 0.5em;
+	text-align: left;
+}
+.history tr:nth-child(even){
+	background-color:silver;
+}

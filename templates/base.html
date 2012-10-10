@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <title>{% block title %}Default Title{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="/css/marketkin.css" />
+        {% endblock %}
+    </head>
+    <body>
+        <div class="header">
+            {% block header %}
+            {% if username %}
+            <a href="/logout">({{username}}) logout</a>
+            {% else %}
+            <a href="/login">login</a>
+            {% endif %}
+            {% endblock %}
+        </div>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="footer">
+            {% block footer %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

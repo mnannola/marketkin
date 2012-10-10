@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+    {% block title %}
+        New Post
+    {% endblock %}
+{% block content %}
+    <h2>New Post</h2>
+    <form method="post">
+        Title*:<input name="title" value="{{title}}" type="text">
+        <span class="error">{{titleError}}</span>
+        <br>
+        Post:
+        <br>
+        <textarea name="content">{{content}}</textarea>
+        <span class="error">{{contentError}}</span>
+        <br>
+        * fields are required
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+{% endblock %}

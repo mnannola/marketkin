@@ -1,0 +1,20 @@
+ToDo List for marketkin:
+
+Create dbmodels.py file with anticipated db models
+    User
+    Post
+    Spot
+    PostSpot
+    UserSpot
+Create forms to input data into models
+    NewUser
+    NewPost
+    NewSpot
+Create HTML pages to display the model data
+    ViewPost
+    ViewSpot
+    ViewUser(?)
+Create site navigation menu
+Integrate Twitter Bootstrap into site so it doesn't look like shit
+Add comprehensive ability to search for Spot
+
