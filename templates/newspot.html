@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+    New Spot
+{% endblock %}
+{% block content %}
+    <h2> New Spot </h2>
+    <form method="post">
+        Spot Name*:<input name="name" value="{{name}}" type="text">
+        <span class="error">{{nameError}}</span>
+        <br>
+        Website URL*: <input name="website" value="{{website}}" type="text">
+        <span class="error">{{websiteError}}</span>
+        <br>
+        City:<input name="city" value="{{city}}" type="text">
+        <br>
+        State:<input name="state" value="{{state}}" type="text">
+        <br>
+        * fields are required
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+{% endblock %}

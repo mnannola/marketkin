@@ -42,6 +42,20 @@ class Spot(db.Model):
     state = db.StringProperty(required=False)
     zipcode = db.StringProperty(required=False)
 
+    @classmethod
+    def by_id(cls, sid):
+        return Spot.get_by_id(sid)
+
+    @classmethod
+    def by_name(cls, name):
+        s = Spot.all().filter('name =', name).get()
+        return s
+
+    @classmethod
+    def by_website(cls, website):
+        s = Spot.all().filter('website =', website).get()
+        return s
+
 
 class PostSpot(db.Model):
     spot = db.ReferenceProperty(Spot)
@@ -51,3 +65,8 @@ class PostSpot(db.Model):
 class UserSpots(db.Model):
     user = db.ReferenceProperty(User)
     spot = db.ReferenceProperty(Spot)
+
+    @classmethod
+    def by_user(cls, user):
+        userSpots = UserSpots.all().filter('user =', user).get()
+        return userSpots

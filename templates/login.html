@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-
-<html>
-	<head>
-		<title>Login</title>
-		<style type="text/css">
-			.error{
-				color:red;
-			}
-
-		</style>
-	</head>
-	<body>
+{% extends "base.html" %}
+{% block title %}
+Sign Up
+{% endblock %}
+{% block content %}
 		<h2>Login</h2>
 		<form method="post">
 			Username: <input name="username" value="{{username}}">
@@ -22,5 +14,4 @@
 			<div class="error">{{invalidError}}</div>
 			<input type="submit">
 		</form>
-	</body>
-</html>
+{% endblock %}

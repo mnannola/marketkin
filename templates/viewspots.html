@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Spots
+{% endblock %}
+{% block content %}
+    <div class="spots">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Website</th>
+                    <th>City</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if userSpots %}
+                    {% for spot in userSpots %}
+                        <tr>
+                            <td>{{spot.name}}</td>
+                            <td>{{spot.website}}</td>
+                            <td>{{spot.city}}</td>
+                            <td>{{spot.state}}</td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
